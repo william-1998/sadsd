@@ -1,0 +1,15 @@
+<?php 
+
+	include ("conexion.php");
+
+
+$reg=mysql_query("SELECT nombre FROM consultas WHERE nombre ='$_POST[nombre]'",$x);
+if ($reg=mysql_fetch_array($reg)){
+	mysql_query("DELETE FROM consultas WHERE nombre ='$_POST[nombre]'",$x);
+echo "eliminado";
+
+}else{
+echo "erot";
+}
+?>
+
